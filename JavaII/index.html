@@ -3,20 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Muzeu i sendeve të zakonshme</title>
+    <title>Muzeu i sendeve</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <a class="skip" href="#main">Kalo te përmbajtja</a>
     <header>
       <p>Programimi në WWW · Pikënisja</p>
-      <h1>Muzeu i sendeve të zakonshme</h1>
+      <h1>Muzeu i sendeve</h1>
     </header>
+
+    <nav>
+      <a href="#celesi">Çelësi</a>
+      <a href="#filxhani">Filxhani</a>
+      <a href="#bileta">Bileta</a>
+    </nav>
+
     <main id="main">
-      <!-- TODO: Ndërto këtu ndërfaqen sipas fletës së ushtrimit. -->
-      <h2>Pikënisja</h2>
-      <p>Lexo kërkesat dhe zëvendëso këtë përmbajtje.</p>
+      <p>Ekspozita: 1 tetor 2026</p>
+
+      <section class="kartat">
+        <article class="karta" id="celesi">
+          <h2>Çelësi</h2>
+          <svg viewBox="0 0 100 100" role="img" aria-label="Një çelës i vjetër">
+            <circle cx="35" cy="35" r="18" fill="none" stroke="#b36b00" stroke-width="8" />
+            <rect x="45" y="45" width="8" height="40" fill="#b36b00" transform="rotate(-45 49 65)" />
+          </svg>
+          <p>Hapja e një dere mund të jetë fillimi i një historie.</p>
+          <details>
+            <summary>Historia e fshehur</summary>
+            <p>Ky çelës i përket një shtëpie që nuk ekziston më.</p>
+          </details>
+        </article>
+
+        <article class="karta" id="filxhani">
+          <h2>Filxhani</h2>
+          <svg viewBox="0 0 100 100" role="img" aria-label="Një filxhan mbledhës">
+            <path d="M20 30 H70 V60 Q70 80 45 80 Q20 80 20 60 Z" fill="#1a6fa8" />
+            <path d="M70 38 H80 Q90 38 85 55 Q80 62 68 62" fill="none" stroke="#1a6fa8" stroke-width="6" />
+          </svg>
+          <p>Një filxhan mbledh kujtime nga bisedat.</p>
+          <details>
+            <summary>Historia e fshehur</summary>
+            <p>Është përdorur për kafenë e çdo të diele në familje.</p>
+          </details>
+        </article>
+
+        <article class="karta" id="bileta">
+          <h2>Bileta</h2>
+          <svg viewBox="0 0 100 100" role="img" aria-label="Një biletë udhëtimi">
+            <rect x="10" y="28" width="80" height="44" rx="6" fill="#f0bd62" />
+            <line x1="65" y1="28" x2="65" y2="72" stroke="#6b4a00" stroke-width="2" stroke-dasharray="4 3" />
+          </svg>
+          <p>Një udhëtim i shkurtër, një kujtim i gjatë.</p>
+          <details>
+            <summary>Historia e fshehur</summary>
+            <p>Bileta e një treni që nisej vetëm një herë në ditë.</p>
+          </details>
+        </article>
+      </section>
     </main>
+
     <footer>Shembull mësimor · Të dhëna të sajuara · Vetëm front end</footer>
   </body>
 </html>
