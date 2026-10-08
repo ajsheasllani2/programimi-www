@@ -1,0 +1,178 @@
+:root {
+  --ngjyra-teksti: #17263c;
+  --ngjyra-teksti-dyte: #3d4b5f;
+  --ngjyra-sfondi: #f3f6fa;
+  --ngjyra-paneli: #ffffff;
+  --ngjyra-kufiri: #d3dae4;
+  --ngjyra-theksi: #176b5c;
+  --ngjyra-theksi-erret: #0f4f43;
+  --ngjyra-mbi-theks: #ffffff;
+  --ngjyra-fokusi: #c2410c;
+
+  --hapesire-xs: 0.25rem;
+  --hapesire-s: 0.5rem;
+  --hapesire-m: 1rem;
+  --hapesire-l: 1.5rem;
+  --hapesire-xl: 2.5rem;
+
+  --rrezja: 0.5rem;
+  --rrezja-pilule: 999px;
+  --kufi-trashesia: 2px;
+  --gjeresia-max: 42rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--ngjyra-teksti);
+  background: var(--ngjyra-sfondi);
+  overflow-wrap: anywhere;
+}
+
+.mbajtes {
+  width: 100%;
+  max-width: 60rem;
+  margin-inline: auto;
+  padding-inline: var(--hapesire-m);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ngjyra-fokusi);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: var(--hapesire-m);
+  top: -4rem;
+  padding: var(--hapesire-s) var(--hapesire-m);
+  background: var(--ngjyra-teksti);
+  color: var(--ngjyra-paneli);
+  border-radius: var(--rrezja);
+  z-index: 10;
+}
+.skip:focus {
+  top: var(--hapesire-m);
+}
+
+.koka {
+  padding-block: var(--hapesire-m) var(--hapesire-l);
+  border-bottom: 3px solid var(--ngjyra-theksi);
+}
+.koka__nentitull {
+  margin: 0 0 var(--hapesire-s);
+  color: var(--ngjyra-teksti-dyte);
+}
+.koka__titull {
+  margin: 0;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+}
+
+main {
+  padding-block: var(--hapesire-xl);
+}
+
+.afishe {
+  width: 100%;
+  max-width: var(--gjeresia-max);
+  margin-inline: auto;
+  padding: clamp(var(--hapesire-m), 5vw, var(--hapesire-xl));
+  background: var(--ngjyra-paneli);
+  border: 1px solid var(--ngjyra-kufiri);
+  border-radius: var(--rrezja);
+}
+
+.afishe__titull {
+  margin: var(--hapesire-l) 0 var(--hapesire-m);
+  font-size: clamp(1.3rem, 4.5vw, 1.6rem);
+  line-height: 1.25;
+}
+
+.afishe__pershkrim {
+  margin: 0 0 var(--hapesire-l);
+}
+
+.etiketat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hapesire-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.etiketa {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--hapesire-xs);
+  padding: var(--hapesire-xs) var(--hapesire-m);
+  border: var(--kufi-trashesia) solid var(--ngjyra-theksi);
+  border-radius: var(--rrezja-pilule);
+  font-size: 0.95rem;
+}
+.etiketa__ikone {
+  font-weight: 700;
+  color: var(--ngjyra-theksi);
+}
+
+.etiketa--falas {
+  border-style: solid;
+}
+.etiketa--kufizuar {
+  border-style: dashed;
+  font-weight: 600;
+}
+.etiketa--online {
+  border-style: double;
+  border-width: 4px;
+}
+
+.detajet {
+  margin: 0 0 var(--hapesire-m);
+}
+.detajet__rresht {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hapesire-s);
+}
+.detajet dt {
+  font-weight: 700;
+  min-width: 4rem;
+}
+.detajet dt::after {
+  content: ":";
+}
+.detajet dd {
+  margin: 0;
+}
+
+.buton {
+  display: inline-block;
+  padding: var(--hapesire-s) var(--hapesire-m);
+  background: var(--ngjyra-theksi);
+  color: var(--ngjyra-mbi-theks);
+  border: var(--kufi-trashesia) solid var(--ngjyra-theksi);
+  border-radius: var(--rrezja);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.buton:hover {
+  background: var(--ngjyra-theksi-erret);
+  border-color: var(--ngjyra-theksi-erret);
+}
+.buton:focus-visible {
+  background: var(--ngjyra-theksi-erret);
+}
+
+.fundi {
+  padding-block: var(--hapesire-l);
+  color: var(--ngjyra-teksti-dyte);
+}
