@@ -3,7 +3,6 @@
 Afishja e klubit të debatit, e kthyer nga një panel i palexueshëm në një ftesë të qartë.
 
 ## Struktura
-
 ```
 JavaIII/
 ├── index.html          # afishja (titull, datë, vend, përshkrim, lidhje regjistrimi)
