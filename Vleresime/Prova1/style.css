@@ -1,0 +1,36 @@
+* {
+     box-sizing: border-box; 
+    }
+
+body {
+     font-family: system-ui, sans-serif; margin: 1rem; 
+    }
+
+.resources {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1rem;
+    border: 2px solid navy;
+    gap: 1rem;
+    box-sizing: border-box;
+    }
+
+a:focus {
+     outline: 3px solid navy; 
+     outline-offset: 3px; 
+}
+
+article{
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 800px){
+    
+    .resources:first-child(){
+        grid-column: 1 / -1;
+    }
+    .resources{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+}
